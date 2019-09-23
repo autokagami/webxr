@@ -2218,7 +2218,7 @@ The feature identifier for this feature is <code>"xr-spatial-tracking"</code>.
 
 The [=default allowlist=] for this feature is <code>["self"]</code>.
 
-Note: If the document's origin is not allowed to use the <code>"xr-spatial-tracking"</code> feature policy any [=immersive sessions=] will be blocked, because all [=immersive sessions=] require some use of spatial tracking. [=Inline sessions=] will still be allowed, but restricted to only using the {{XRReferenceSpaceType/"viewer"}} {{XRReferenceSpace}}.
+Note: If the document's origin is not allowed to use the <code>"xr-spatial-tracking"</code> feature policy any [=immersive sessions=] will be blocked, because all [=immersive sessions=] require some use of spatial tracking. [=Inline sessions=] will still be allowed, but {{XR/requestSession()}} will only succeed if no {{XRReferenceSpaceType}}s other than {{XRReferenceSpaceType/"viewer"}} are listed in the [=required features=] array. These sessions will only be capable of creating an {{XRReferenceSpaceType/"viewer"}} {{XRReferenceSpace}}.
 
 Acknowledgements {#ack}
 ================
